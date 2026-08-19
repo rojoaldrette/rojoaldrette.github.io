@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
-
-    <title>{{ page.title }} · Research · {{ site.title }}</title>
-
-    <link rel="stylesheet"
-          href="{{ '/assets/css/research.css' | relative_url }}">
-
-</head>
-
-<body>
+---
+layout: default
+---
 
 <header class="research-header">
 
@@ -28,7 +13,7 @@
     <nav class="research-nav">
 
         <a href="{{ '/research/' | relative_url }}">
-            Home
+            Research
         </a>
 
         <a href="{{ '/research/papers/' | relative_url }}">
@@ -47,22 +32,8 @@
 
 </header>
 
-
 <main class="research-container">
 
     {{ content }}
 
 </main>
-
-
-<footer class="research-footer">
-
-    <p>
-        Research notes and projects · {{ site.title }}
-    </p>
-
-</footer>
-
-</body>
-
-</html>
