@@ -194,3 +194,49 @@ body.section-fun .channel-card span { font-weight: 800; color: var(--accent); }
 @media (max-width: 500px) {
   body.section-fun .videos-list { grid-template-columns: 1fr; }
 }
+
+
+/* Wider video catalogue */
+body.section-fun .video-catalogue,
+body.section-fun .videos-page {
+  width: min(1500px, calc(100vw - 4rem));
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.section-fun .video-grid,
+body.section-fun #video-results {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+body.section-fun .video-card {
+  min-width: 0;
+}
+
+@media (max-width: 1250px) {
+  body.section-fun .video-grid,
+  body.section-fun #video-results {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  body.section-fun .video-grid,
+  body.section-fun #video-results {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  body.section-fun .video-catalogue,
+  body.section-fun .videos-page {
+    width: min(100% - 2rem, 600px);
+  }
+
+  body.section-fun .video-grid,
+  body.section-fun #video-results {
+    grid-template-columns: 1fr;
+  }
+}
