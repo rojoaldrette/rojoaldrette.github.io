@@ -16,6 +16,6 @@ things that don't belong anywhere else.
 
 Karamazov
 
-[Review Karamazov →](Karamazov.md)
+[Review Karamazov](Karamazov.md)
 
 </div>
