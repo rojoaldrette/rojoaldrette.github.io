@@ -1,5 +1,6 @@
 ---
-layout: research
+layout: paper
+section: research
 title: Papers
 ---
 
