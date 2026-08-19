@@ -9,7 +9,7 @@ A collection of papers I have read and my notes on them.
 
 ## Macroeconomics
 
-### [Aiyagari (1994)](aiyagari-1994.md)
+### [Aiyagari (1994)](aiyagari.md)
 
 **Uninsured Idiosyncratic Risk and Aggregate Saving**
 
