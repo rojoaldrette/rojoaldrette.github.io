@@ -115,15 +115,42 @@ window.videoCatalog = {
 
   function esc(v) { return String(v || '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
 
+  function youtubeId(url) {
+    try {
+      const u = new URL(url);
+      if (u.hostname.includes('youtu.be')) return u.pathname.slice(1);
+      if (u.searchParams.get('v')) return u.searchParams.get('v');
+      const parts = u.pathname.split('/');
+      const embedIndex = parts.indexOf('embed');
+      if (embedIndex !== -1 && parts[embedIndex + 1]) return parts[embedIndex + 1];
+      return '';
+    } catch (e) {
+      return '';
+    }
+  }
+
   function card(v) {
-    const article = document.createElement('article'); article.className = 'video-card' + (v.featured ? ' is-featured' : '');
+    const article = document.createElement('article');
+    article.className = 'video-card' + (v.featured ? ' is-featured' : '');
     const channel = channelById[v.channel], channelName = channel ? channel.name : v.channel;
     const tagsHtml = (v.tags || []).map(id => tagById[id] ? '<span class="tag">' + esc(tagById[id].name) + '</span>' : '').join('');
+    const videoId = youtubeId(v.url);
+    const thumbnail = videoId ? `https://img.youtube.com/vi/${encodeURIComponent(videoId)}/hqdefault.jpg` : '';
+
     article.innerHTML = `
-      <div class="video-card-top"><div><h2>${esc(v.title)}</h2><p class="item-meta">${esc(channelName)}</p></div>${v.featured ? '<span class="video-featured">★ 10/10</span>' : ''}</div>
-      <div class="video-tags">${tagsHtml}</div>
-      ${v.review ? '<p class="item-review">' + esc(v.review) + '</p>' : ''}
-      <a class="video-watch" href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">Ver en YouTube &rarr;</a>`;
+      ${thumbnail ? `<a class="video-thumbnail-link" href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">
+        <img class="video-thumbnail" src="${thumbnail}" alt="Miniatura de ${esc(v.title)}" loading="lazy">
+        <span class="video-play">▶</span>
+      </a>` : ''}
+      <div class="video-card-content">
+        <div class="video-card-top">
+          <div><h2>${esc(v.title)}</h2><p class="item-meta">${esc(channelName)}</p></div>
+          ${v.featured ? '<span class="video-featured">★ 10/10</span>' : ''}
+        </div>
+        <div class="video-tags">${tagsHtml}</div>
+        ${v.review ? '<p class="item-review">' + esc(v.review) + '</p>' : ''}
+        <a class="video-watch" href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">Ver en YouTube &rarr;</a>
+      </div>`;
     return article;
   }
 
