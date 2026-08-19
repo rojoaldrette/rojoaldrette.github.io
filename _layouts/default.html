@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
 
     <title>
         {{ page.title }} · {{ site.title }}
     </title>
 
-    <link rel="stylesheet"
-          href="{{ '/assets/css/style.css' | relative_url }}">
+    {% if page.section == "research" %}
+
+        <link rel="stylesheet"
+              href="{{ '/assets/css/research.css' | relative_url }}">
+
+    {% elsif page.section == "fun" %}
+
+        <link rel="stylesheet"
+              href="{{ '/assets/css/fun.css' | relative_url }}">
+
+    {% else %}
+
+        <link rel="stylesheet"
+              href="{{ '/assets/css/home.css' | relative_url }}">
+
+    {% endif %}
+
 </head>
 
 <body>
 
-<header>
-
-<nav>
-
-<a href="{{ '/' | relative_url }}">Home</a>
-
-<a href="{{ '/papers/' | relative_url }}">Papers</a>
-
-<a href="{{ '/research/' | relative_url }}">Research</a>
-
-<a href="{{ '/notes/' | relative_url }}">Notes</a>
-
-<a href="{{ '/about/' | relative_url }}">About</a>
-
-</nav>
-
-</header>
-
-<main>
-
 {{ content }}
-
-</main>
 
 </body>
 
