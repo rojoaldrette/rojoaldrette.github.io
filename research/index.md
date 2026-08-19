@@ -3,34 +3,55 @@ layout: research
 title: Research
 ---
 
+<div class="research-hero">
+
 # Research
 
-I am an economics student interested in macroeconomics,
+I study economics, with particular interests in macroeconomics,
 dynamic models, heterogeneous agents, and quantitative economics.
 
----
+I use this space to document the papers I read, the models I work on,
+and the questions that emerge from them.
 
-## Papers
+</div>
 
-Notes and reviews of papers I have read.
 
-[Browse papers →](papers/)
+<h2>Explore</h2>
 
----
+<div class="research-sections">
 
-## My Research
+<a class="research-card"
+   href="{{ '/research/papers/' | relative_url }}">
 
-Projects I am currently working on.
+<h2>Papers</h2>
 
-[Explore my research →](my-research/)
+<p>
+Notes, reviews, criticisms, and technical explorations
+of papers I have read.
+</p>
 
----
+</a>
 
-## Research interests
 
-- Macroeconomics
-- Heterogeneous-agent models
-- Dynamic programming
-- Continuous-time economics
-- Environmental economics
-- Quantitative methods
+<a class="research-card"
+   href="{{ '/research/my-research/' | relative_url }}">
+
+<h2>My Research</h2>
+
+<p>
+Current research projects, ideas, models, empirical work,
+and things I am still trying to figure out.
+</p>
+
+</a>
+
+</div>
+
+
+<h2>Research interests</h2>
+
+<p>
+Macroeconomics · Heterogeneous Agents · Dynamic Programming ·
+Continuous-Time Economics · Environmental Economics ·
+Quantitative Methods
+</p>
