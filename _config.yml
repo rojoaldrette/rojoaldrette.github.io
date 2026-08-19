@@ -1,3 +1,10 @@
-theme: jekyll-theme-minimal
 title: Rojoaldrette's homepage
-description: Bookmark this to keep an eye on my project updates!
+description: "Research, ideas, and other things I find interesting."
+
+url: ""
+baseurl: ""
+
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
