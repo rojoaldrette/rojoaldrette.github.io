@@ -1,50 +1,66 @@
 ---
-layout: research
-title: "Aiyagari (1994)"
----
+layout: paper
 
-# Aiyagari (1994)
+title: "Uninsured Idiosyncratic Risk and Aggregate Saving"
 
-## Uninsured Idiosyncratic Risk and Aggregate Saving
+authors:
+  - Rao Aiyagari
 
-**Author:** Rao Aiyagari  
-**Year:** 1994  
-**Journal:** Quarterly Journal of Economics
+year: 1994
 
-**Topics:**  
-Heterogeneous agents · Precautionary saving · Incomplete markets
+journal: "Quarterly Journal of Economics"
 
-**My rating:** 9/10
+subtitle: "Precautionary saving and heterogeneous agents"
+
+rating: 9
+
+difficulty: 5
+
+read_date: "August 2026"
+
+tags:
+  - Macroeconomics
+  - Heterogeneous Agents
+  - Precautionary Saving
+  - Incomplete Markets
+  - Asset Accumulation
 
 ---
 
 ## The paper in one paragraph
 
-Write your short explanation here.
+Write your summary here.
 
 ---
 
 ## The question
 
-What is the paper actually trying to explain?
+What is Aiyagari actually trying to explain?
 
 ---
 
 ## The model
 
-Explain the model in your own notation.
+Explain the model here.
 
-You can use LaTeX:
+For example:
 
 $$
 V(a,e)
+=
+\max_c
+\left\{
+u(c)
++
+\beta E[V(a',e')]
+\right\}.
 $$
 
 ---
 
 ## The mechanism
 
-Explain the mechanism without relying on the paper's prose.
+Explain the economic mechanism in your own words.
 
 ---
 
@@ -56,13 +72,13 @@ Your notes.
 
 ## What I found difficult
 
-Things that initially confused you.
+Things that took you time to understand.
 
 ---
 
 ## My criticism
 
-Your own assessment of the paper.
+Your assessment of the paper.
 
 ---
 
@@ -70,7 +86,3 @@ Your own assessment of the paper.
 
 - [Huggett (1993)](../huggett-1993.md)
 - [Kiyotaki & Moore (1997)](../kiyotaki-moore-1997.md)
-
----
-
-[← Back to Papers](../)
