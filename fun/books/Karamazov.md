@@ -1,6 +1,6 @@
 ---
 layout: fun
-title: "The Brothers Karamazov"
+title: "Karamazov"
 ---
 
 # The Brothers Karamazov
