@@ -98,3 +98,38 @@ body.section-fun .item-meta {
 body.section-fun .stars { color: #ffb300; font-size: 1rem; margin: 0 0 0.5rem; }
 
 body.section-fun .item-review { font-size: 0.95rem; margin: 0; }
+
+
+/* --- catálogo de videos --- */
+body.section-fun .videos-intro { max-width: 760px; margin-bottom: 2rem; font-size: 1.05rem; }
+body.section-fun .videos-layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 2rem; align-items: start; }
+body.section-fun .videos-sidebar { position: sticky; top: 1rem; }
+body.section-fun .videos-filter-group { margin-bottom: 1.5rem; }
+body.section-fun .videos-filter-group h2, body.section-fun .videos-filter-group h3 { margin: 0 0 .5rem; }
+body.section-fun .videos-filter-group h3 { font-size: .95rem; }
+body.section-fun .video-check { display: flex; align-items: center; gap: .45rem; margin: .18rem 0; cursor: pointer; font-size: .9rem; }
+body.section-fun .video-check input { accent-color: var(--accent); }
+body.section-fun .video-tag-node { margin-left: calc(var(--tag-depth) * .75rem); }
+body.section-fun .video-filter-clear { border: 2px solid var(--fg); background: white; border-radius: 999px; padding: .3rem .7rem; font: inherit; cursor: pointer; }
+body.section-fun .video-filter-clear:hover { background: var(--accent2); }
+body.section-fun .videos-toolbar { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+body.section-fun #video-search { flex: 1; min-width: 0; border: 3px solid var(--fg); border-radius: 999px; padding: .65rem 1rem; font: inherit; background: white; }
+body.section-fun .video-count { color: var(--muted); white-space: nowrap; }
+body.section-fun .videos-list { display: grid; gap: 1rem; }
+body.section-fun .video-card { background: white; border: 3px solid var(--fg); border-radius: 16px; padding: 1.2rem; box-shadow: 5px 5px 0 var(--fg); }
+body.section-fun .video-card.is-featured { border-color: var(--accent); }
+body.section-fun .video-card-top { display: flex; justify-content: space-between; gap: 1rem; }
+body.section-fun .video-card h2 { margin: 0; font-size: 1.25rem; line-height: 1.15; }
+body.section-fun .video-featured { color: #ff9f00; font-weight: 800; white-space: nowrap; }
+body.section-fun .video-tags { margin: .45rem 0 .7rem; }
+body.section-fun .video-watch { display: inline-block; margin-top: .7rem; font-weight: 800; color: var(--accent); }
+body.section-fun .video-empty { padding: 2rem; text-align: center; color: var(--muted); }
+body.section-fun .recommended-channels { margin-top: 4rem; }
+body.section-fun .recommended-channels h2 { color: var(--accent); }
+body.section-fun .channel-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+body.section-fun .channel-card { display: block; background: white; border: 3px solid var(--fg); border-radius: 16px; padding: 1rem; box-shadow: 4px 4px 0 var(--fg); }
+body.section-fun .channel-card h3 { margin: 0 0 .3rem; }
+body.section-fun .channel-card p { margin: 0 0 .6rem; color: var(--muted); font-size: .9rem; }
+body.section-fun .channel-card span { font-weight: 800; color: var(--accent); }
+@media (max-width: 760px) { body.section-fun .videos-layout { grid-template-columns: 1fr; } body.section-fun .videos-sidebar { position: static; } body.section-fun .videos-toolbar { align-items: stretch; flex-direction: column; } body.section-fun .video-card-top { flex-direction: column; } }
+

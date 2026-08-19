@@ -1,0 +1,5 @@
+- id: ejemplo
+  name: "Canal de ejemplo"
+  url: "https://www.youtube.com/"
+  description: "Sustituye esto por una breve descripción del canal."
+  recommended: true

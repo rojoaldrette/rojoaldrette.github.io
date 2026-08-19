@@ -1,0 +1,35 @@
+# parent define la jerarquía. Un video con microeconomia también
+# aparece automáticamente al filtrar por economia o aprendizaje.
+- id: aprendizaje
+  name: "Aprendizaje"
+  parent: null
+- id: economia
+  name: "Economía"
+  parent: aprendizaje
+- id: microeconomia
+  name: "Microeconomía"
+  parent: economia
+- id: macroeconomia
+  name: "Macroeconomía"
+  parent: economia
+- id: econometria
+  name: "Econometría"
+  parent: economia
+- id: teoria_economica
+  name: "Teoría económica"
+  parent: economia
+- id: matematicas
+  name: "Matemáticas"
+  parent: aprendizaje
+- id: programacion
+  name: "Programación"
+  parent: aprendizaje
+- id: academico
+  name: "Académico"
+  parent: null
+- id: investigacion
+  name: "Investigación"
+  parent: academico
+- id: seminarios
+  name: "Seminarios y charlas"
+  parent: academico

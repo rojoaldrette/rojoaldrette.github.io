@@ -1,0 +1,18 @@
+# Cada video lleva solo los tags más específicos que correspondan.
+- title: "Ejemplo de video de microeconomía"
+  url: "https://www.youtube.com/watch?v=VIDEO_ID"
+  channel: "ejemplo"
+  tags:
+    - microeconomia
+  review: >
+    Una reseña corta del video. Aquí puedes explicar en uno o dos párrafos
+    por qué vale la pena verlo.
+  featured: true
+
+- title: "Ejemplo de video de macroeconomía"
+  url: "https://www.youtube.com/watch?v=VIDEO_ID_2"
+  channel: "ejemplo"
+  tags:
+    - macroeconomia
+  review: "Otra reseña breve."
+  featured: false
