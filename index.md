@@ -1,42 +1,34 @@
 ---
-layout: default
+layout: home
 title: Home
 ---
 
-# Rodrigo Aldrette
+# Rodrigo's blog!
 
-### Economics · Macroeconomics · Research
+Welcome.
 
-I study macroeconomics, dynamic models, and quantitative economics.
+I am interested in economics, research, books, ideas, and occasionally
+things that have nothing to do with economics.
 
----
+<div class="home-routes">
 
-## Research
+<a class="route research-route" href="{{ '/research/' | relative_url }}">
+    <h2>Research</h2>
+    <p>
+        Papers, research projects, technical notes and things
+        I'm trying to understand.
+    </p>
+</a>
 
-I am particularly interested in:
+<a class="route fun-route" href="{{ '/fun/' | relative_url }}">
+    <h2>Fun</h2>
+    <p>
+        Books, films, travel, music, games and other things
+        I find interesting.
+    </p>
+</a>
 
-- Heterogeneous-agent macroeconomics
-- Dynamic programming
-- Continuous-time models
-- Firm and household dynamics
-- Environmental economics
-
-[aquí mi insta](https://www.instagram.com/rojoaldrette/)
-
----
-
-## Papers I've Read
-
-I write notes and reviews about the papers I read.
-
----
-
-## Notes
-
-Technical notes on the things I'm learning.
-
-
----
+</div>
 
 ## Currently Reading
 
