@@ -2,40 +2,67 @@
 layout: research
 ---
 
-<article class="paper">
+<article class="paper-page">
 
-    <header class="paper-header">
+    <header class="paper-hero">
 
-        <div class="paper-meta">
+        <div class="paper-kicker">
 
             {% if page.year %}
-                <span>{{ page.year }}</span>
+                {{ page.year }}
             {% endif %}
 
             {% if page.journal %}
-                <span>{{ page.journal }}</span>
+                · {{ page.journal }}
             {% endif %}
 
         </div>
 
+
         <h1>{{ page.title }}</h1>
 
+
         {% if page.subtitle %}
-            <p class="paper-subtitle">
-                {{ page.subtitle }}
-            </p>
+
+        <p class="paper-subtitle">
+            {{ page.subtitle }}
+        </p>
+
         {% endif %}
 
+
         {% if page.authors %}
-            <p class="paper-authors">
-                {{ page.authors | join: ", " }}
-            </p>
+
+        <div class="paper-authors">
+
+            {{ page.authors | join: " · " }}
+
+        </div>
+
+        {% endif %}
+
+
+        {% if page.tags %}
+
+        <div class="paper-tags">
+
+            {% for tag in page.tags %}
+
+            <span class="tag">
+                {{ tag }}
+            </span>
+
+            {% endfor %}
+
+        </div>
+
         {% endif %}
 
     </header>
 
 
-    <div class="paper-layout">
+    <div class="paper-grid">
+
 
         <main class="paper-content">
 
@@ -46,72 +73,88 @@ layout: research
 
         <aside class="paper-sidebar">
 
+
             {% if page.rating %}
 
-            <div class="paper-sidebar-section">
+            <section>
 
-                <h3>My rating</h3>
+                <span class="sidebar-label">
+                    MY RATING
+                </span>
 
-                <div class="rating">
-                    {{ page.rating }}/10
+                <div class="paper-rating">
+                    {{ page.rating }}<small>/10</small>
                 </div>
 
-            </div>
-
-            {% endif %}
-
-
-            {% if page.tags %}
-
-            <div class="paper-sidebar-section">
-
-                <h3>Tags</h3>
-
-                <div class="tags">
-
-                    {% for tag in page.tags %}
-
-                        <span class="tag">
-                            {{ tag }}
-                        </span>
-
-                    {% endfor %}
-
-                </div>
-
-            </div>
+            </section>
 
             {% endif %}
 
 
             {% if page.difficulty %}
 
-            <div class="paper-sidebar-section">
+            <section>
 
-                <h3>Difficulty</h3>
+                <span class="sidebar-label">
+                    DIFFICULTY
+                </span>
 
-                <div>
-                    {{ page.difficulty }}/5
+                <div class="difficulty">
+
+                    {% assign difficulty =
+                       page.difficulty | plus: 0 %}
+
+                    {% for i in (1..5) %}
+
+                        {% if i <= difficulty %}
+                            ●
+                        {% else %}
+                            ○
+                        {% endif %}
+
+                    {% endfor %}
+
                 </div>
 
-            </div>
+            </section>
 
             {% endif %}
 
 
             {% if page.read_date %}
 
-            <div class="paper-sidebar-section">
+            <section>
 
-                <h3>Read</h3>
+                <span class="sidebar-label">
+                    READ
+                </span>
 
                 <div>
                     {{ page.read_date }}
                 </div>
 
-            </div>
+            </section>
 
             {% endif %}
+
+
+            {% if page.paper_url %}
+
+            <section>
+
+                <a class="paper-external"
+                   href="{{ page.paper_url }}"
+                   target="_blank"
+                   rel="noopener">
+
+                    View original paper ↗
+
+                </a>
+
+            </section>
+
+            {% endif %}
+
 
         </aside>
 
