@@ -1,1 +1,120 @@
+---
+layout: research
+---
 
+<article class="paper">
+
+    <header class="paper-header">
+
+        <div class="paper-meta">
+
+            {% if page.year %}
+                <span>{{ page.year }}</span>
+            {% endif %}
+
+            {% if page.journal %}
+                <span>{{ page.journal }}</span>
+            {% endif %}
+
+        </div>
+
+        <h1>{{ page.title }}</h1>
+
+        {% if page.subtitle %}
+            <p class="paper-subtitle">
+                {{ page.subtitle }}
+            </p>
+        {% endif %}
+
+        {% if page.authors %}
+            <p class="paper-authors">
+                {{ page.authors | join: ", " }}
+            </p>
+        {% endif %}
+
+    </header>
+
+
+    <div class="paper-layout">
+
+        <main class="paper-content">
+
+            {{ content }}
+
+        </main>
+
+
+        <aside class="paper-sidebar">
+
+            {% if page.rating %}
+
+            <div class="paper-sidebar-section">
+
+                <h3>My rating</h3>
+
+                <div class="rating">
+                    {{ page.rating }}/10
+                </div>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if page.tags %}
+
+            <div class="paper-sidebar-section">
+
+                <h3>Tags</h3>
+
+                <div class="tags">
+
+                    {% for tag in page.tags %}
+
+                        <span class="tag">
+                            {{ tag }}
+                        </span>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if page.difficulty %}
+
+            <div class="paper-sidebar-section">
+
+                <h3>Difficulty</h3>
+
+                <div>
+                    {{ page.difficulty }}/5
+                </div>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if page.read_date %}
+
+            <div class="paper-sidebar-section">
+
+                <h3>Read</h3>
+
+                <div>
+                    {{ page.read_date }}
+                </div>
+
+            </div>
+
+            {% endif %}
+
+        </aside>
+
+    </div>
+
+</article>
