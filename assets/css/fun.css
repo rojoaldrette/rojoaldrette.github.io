@@ -1,81 +1,100 @@
-body {
-    margin: 0;
+/* fun.css — tono laxo: colorido, redondeado, juguetón */
 
-    background: #fff7ed;
-    color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap');
 
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
+body.section-fun {
+  --bg: #fff7e6;
+  --fg: #2b1d00;
+  --muted: #8a7550;
+  --accent: #ff5d5d;
+  --accent2: #4dd0e1;
 
-    line-height: 1.6;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Baloo 2", system-ui, sans-serif;
 }
 
-.fun-header {
-    padding: 25px 40px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: #ffe4c4;
+body.section-fun .fun-header {
+  padding: 1rem 0;
 }
 
-.fun-brand a {
-    color: #333;
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: 700;
+body.section-fun .fun-header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.fun-nav {
-    display: flex;
-    gap: 20px;
+body.section-fun .back-home {
+  font-weight: 700;
+  color: var(--muted);
 }
 
-.fun-nav a {
-    color: #555;
-    text-decoration: none;
+body.section-fun .fun-nav a {
+  margin-left: 1.2rem;
+  font-weight: 700;
+  background: white;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 2px solid var(--fg);
+  display: inline-block;
+}
+body.section-fun .fun-nav a:hover { background: var(--accent2); }
+
+body.section-fun .fun-main {
+  padding: 2.5rem 1.5rem 4rem;
 }
 
-.fun-nav a:hover {
-    color: #000;
+body.section-fun h1 {
+  font-size: 2.4rem;
+  color: var(--accent);
+  transform: rotate(-1deg);
+  display: inline-block;
 }
 
-.fun-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 60px 30px;
+body.section-fun .fun-footer {
+  padding: 1.5rem 0;
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
-.fun-container h1 {
-    font-size: 3rem;
+/* --- listado de libros / pelis --- */
+body.section-fun .items-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
 }
 
-.fun-card {
-    background: white;
-    border-radius: 18px;
-    padding: 25px;
-    margin: 20px 0;
+body.section-fun .item-card {
+  display: block;
+  background: white;
+  border: 3px solid var(--fg);
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: 5px 5px 0 var(--fg);
+  transition: transform 0.12s ease;
+}
+body.section-fun a.item-card:hover { transform: translate(-2px, -2px); }
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+body.section-fun .tag {
+  display: inline-block;
+  background: var(--accent2);
+  color: var(--fg);
+  border-radius: 999px;
+  padding: 0.05rem 0.6rem;
+  font-size: 0.72rem;
+  margin-right: 0.3rem;
 }
 
-.fun-card:hover {
-    transform: translateY(-3px);
+body.section-fun .item-card h3 { margin: 0 0 0.3rem; font-size: 1.15rem; }
+
+body.section-fun .item-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0 0 0.6rem;
 }
 
-@media (max-width: 700px) {
+body.section-fun .stars { color: #ffb300; font-size: 1rem; margin: 0 0 0.5rem; }
 
-    .fun-header {
-        display: block;
-    }
-
-    .fun-nav {
-        margin-top: 15px;
-        flex-wrap: wrap;
-    }
-
-}
+body.section-fun .item-review { font-size: 0.95rem; margin: 0; }

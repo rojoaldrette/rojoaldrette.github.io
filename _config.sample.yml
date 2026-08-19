@@ -1,0 +1,61 @@
+# _config.sample.yml
+# NO reemplaces tu _config.yml con esto — es solo referencia.
+# Copia las líneas que te falten (title, description, permalink, defaults).
+
+title: "Mi sitio"
+description: "Research & fun."
+baseurl: ""     # déjalo como lo tengas configurado (repo o dominio custom)
+url: ""
+
+markdown: kramdown
+permalink: pretty
+
+# Collections: cada paper/libro/peli es un archivo propio,
+# con su propia URL, dentro de _papers/, _books/, _movies/.
+collections:
+  papers:
+    output: true
+    permalink: /research/papers/:path/
+  books:
+    output: true
+    permalink: /fun/books/:path/
+  movies:
+    output: true
+    permalink: /fun/movies/:path/
+
+# Defaults: así cada página hereda el layout/section correcto
+# sin que tengas que poner "layout" y "section" a mano cada vez,
+# siempre que respetes esta estructura de carpetas / collections.
+defaults:
+  - scope:
+      path: "research"
+    values:
+      layout: "research"
+      section: "research"
+  - scope:
+      path: "fun"
+    values:
+      layout: "fun"
+      section: "fun"
+  - scope:
+      path: ""
+      type: "papers"
+    values:
+      layout: "paper"
+      section: "research"
+  - scope:
+      path: ""
+      type: "books"
+    values:
+      layout: "book"
+      section: "fun"
+  - scope:
+      path: ""
+      type: "movies"
+    values:
+      layout: "movie"
+      section: "fun"
+
+exclude:
+  - _config.sample.yml
+  - README.md

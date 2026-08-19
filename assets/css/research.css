@@ -1,378 +1,101 @@
-/* =========================================
-   RESEARCH — GLOBAL
-   ========================================= */
+/* research.css — tono profesional: serif, paleta muted, estructurado */
 
-body {
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap');
 
-    background: #f8f9fb;
-    color: #20242a;
+body.section-research {
+  --bg: #f7f5f0;
+  --fg: #1b1b1b;
+  --muted: #5a5a52;
+  --accent: #0f1b2d;
+  --border: #ddd8cc;
 
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Helvetica,
-        Arial,
-        sans-serif;
-
-    line-height: 1.7;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Source Serif 4", Georgia, serif;
+  line-height: 1.65;
 }
 
-
-/* =========================================
-   HEADER
-   ========================================= */
-
-.research-header {
-    background: #ffffff;
-
-    border-bottom: 1px solid #e3e6ea;
-
-    position: sticky;
-    top: 0;
-
-    z-index: 100;
+body.section-research .research-header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
 }
 
-.research-header-inner {
-    max-width: 1150px;
-
-    margin: 0 auto;
-
-    padding: 18px 30px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
+body.section-research .research-header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-
-/* Logo */
-
-.research-logo {
-    text-decoration: none;
-
-    color: #17191c;
-
-    display: flex;
-
-    flex-direction: column;
-
-    line-height: 1.1;
+body.section-research .back-home {
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
-.logo-main {
-    font-size: 1.05rem;
+body.section-research .research-nav a {
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  border-bottom: 2px solid transparent;
+}
+body.section-research .research-nav a:hover { border-bottom-color: var(--accent); }
 
-    font-weight: 700;
-
-    letter-spacing: -0.02em;
+body.section-research .research-main {
+  padding: 3rem 1.5rem 4rem;
 }
 
-.logo-sub {
-    margin-top: 3px;
-
-    font-size: 0.7rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.15em;
-
-    color: #777;
+body.section-research h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
 }
 
-
-/* Navigation */
-
-.research-nav {
-    display: flex;
-
-    align-items: center;
-
-    gap: 30px;
+body.section-research .research-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+  font-size: 0.8rem;
+  color: var(--muted);
 }
 
-.research-nav a {
-    position: relative;
-
-    text-decoration: none;
-
-    color: #555;
-
-    font-size: 0.9rem;
-
-    font-weight: 500;
-
-    padding: 8px 0;
+/* --- listado de papers --- */
+body.section-research .papers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.research-nav a:hover {
-    color: #111;
+body.section-research .paper-entry {
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border);
 }
 
+body.section-research .paper-entry h3 { margin: 0 0 0.3rem; font-size: 1.2rem; }
 
-/* little underline on hover */
-
-.research-nav a:not(.back-home)::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-
-    width: 0;
-
-    height: 2px;
-
-    background: #1d4f73;
-
-    transition: width 0.2s ease;
+body.section-research .paper-meta {
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0 0 0.6rem;
 }
 
-.research-nav a:not(.back-home):hover::after {
-    width: 100%;
+body.section-research .tag {
+  display: inline-block;
+  background: #eae6d9;
+  color: var(--accent);
+  border-radius: 3px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.72rem;
+  margin-right: 0.3rem;
+  text-transform: lowercase;
 }
 
-
-/* Back to main site */
-
-.research-nav .back-home {
-    color: #888;
-
-    padding-left: 20px;
-
-    border-left: 1px solid #ddd;
-}
-
-
-/* =========================================
-   MAIN CONTAINER
-   ========================================= */
-
-.research-container {
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    padding: 70px 30px 100px;
-}
-
-
-/* =========================================
-   TYPOGRAPHY
-   ========================================= */
-
-.research-container h1 {
-    color: #17191c;
-
-    font-size: 3rem;
-
-    line-height: 1.15;
-
-    letter-spacing: -0.04em;
-
-    margin-bottom: 20px;
-}
-
-.research-container h2 {
-    color: #20242a;
-
-    font-size: 1.7rem;
-
-    margin-top: 55px;
-
-    letter-spacing: -0.02em;
-}
-
-.research-container h3 {
-    font-size: 1.15rem;
-
-    margin-top: 35px;
-}
-
-.research-container p {
-    max-width: 760px;
-}
-
-.research-container a {
-    color: #1d557d;
-
-    text-decoration: none;
-}
-
-.research-container a:hover {
-    text-decoration: underline;
-}
-
-
-/* =========================================
-   RESEARCH HERO
-   ========================================= */
-
-.research-hero {
-    padding: 55px 60px;
-
-    margin-bottom: 70px;
-
-    background: #ffffff;
-
-    border: 1px solid #e1e5e9;
-
-    border-radius: 16px;
-
-    box-shadow:
-        0 8px 30px rgba(20, 30, 40, 0.04);
-}
-
-.research-hero h1 {
-    margin-top: 0;
-
-    font-size: 3.5rem;
-}
-
-.research-hero p {
-    font-size: 1.15rem;
-
-    color: #606770;
-
-    max-width: 720px;
-}
-
-
-/* =========================================
-   SECTION CARDS
-   ========================================= */
-
-.research-sections {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 25px;
-
-    margin-top: 40px;
-}
-
-.research-card {
-    display: block;
-
-    background: #ffffff;
-
-    border: 1px solid #e1e5e9;
-
-    border-radius: 14px;
-
-    padding: 30px;
-
-    text-decoration: none !important;
-
-    color: inherit !important;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.research-card:hover {
-    transform: translateY(-4px);
-
-    border-color: #c7d0d8;
-
-    box-shadow:
-        0 12px 35px rgba(20, 30, 40, 0.08);
-
-    text-decoration: none !important;
-}
-
-.research-card h2 {
-    margin: 0 0 10px;
-
-    font-size: 1.4rem;
-}
-
-.research-card p {
-    color: #6a7179;
-
-    margin-bottom: 0;
-}
-
-
-/* =========================================
-   FOOTER
-   ========================================= */
-
-.research-footer {
-    border-top: 1px solid #ddd;
-
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    padding: 30px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    color: #888;
-
-    font-size: 0.85rem;
-}
-
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 750px) {
-
-    .research-header-inner {
-        display: block;
-
-        padding: 18px 20px;
-    }
-
-    .research-nav {
-        margin-top: 18px;
-
-        gap: 18px;
-
-        flex-wrap: wrap;
-    }
-
-    .research-nav .back-home {
-        border-left: none;
-
-        padding-left: 0;
-    }
-
-    .research-container {
-        padding: 40px 20px 70px;
-    }
-
-    .research-container h1 {
-        font-size: 2.4rem;
-    }
-
-    .research-hero {
-        padding: 35px 25px;
-    }
-
-    .research-hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .research-sections {
-        grid-template-columns: 1fr;
-    }
-
-    .research-footer {
-        display: block;
-    }
-
+body.section-research .paper-review { margin: 0 0 0.5rem; }
+body.section-research .paper-rating {
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0;
 }

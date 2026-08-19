@@ -1,0 +1,15 @@
+---
+layout: fun
+---
+<article class="entry-full">
+  <p class="item-meta">{{ page.director }} &middot; {{ page.year }}</p>
+  {%- if page.rating %}
+  <p class="stars">{% assign r = page.rating %}{% for i in (1..r) %}&#9733;{% endfor %}</p>
+  {%- endif %}
+
+  <div class="entry-body">
+    {{ content }}
+  </div>
+
+  <p class="back-link"><a href="{{ '/fun/movies.html' | relative_url }}">&larr; todas las pelis</a></p>
+</article>

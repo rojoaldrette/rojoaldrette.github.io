@@ -1,62 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
-
-    <title>{{ page.title }} · Fun · {{ site.title }}</title>
-
-    <link rel="stylesheet"
-          href="{{ '/assets/css/fun.css' | relative_url }}">
-
-</head>
-
-<body>
-
+---
+layout: default
+---
 <header class="fun-header">
-
-    <div class="fun-brand">
-        <a href="{{ '/fun/' | relative_url }}">
-            My Stuff
-        </a>
-    </div>
-
+  <div class="wrap">
+    <a class="back-home" href="{{ '/' | relative_url }}">&larr; volver</a>
     <nav class="fun-nav">
-
-        <a href="{{ '/fun/' | relative_url }}">
-            Home
-        </a>
-
-        <a href="{{ '/fun/books/' | relative_url }}">
-            Books
-        </a>
-
-        <a href="{{ '/fun/movies/' | relative_url }}">
-            Movies
-        </a>
-
-        <a href="{{ '/fun/other/' | relative_url }}">
-            Other
-        </a>
-
-        <a href="{{ '/' | relative_url }}">
-            ← Main site
-        </a>
-
+      <a href="{{ '/fun/' | relative_url }}">fun ✦</a>
+      <a href="{{ '/fun/books.html' | relative_url }}">libros</a>
+      <a href="{{ '/fun/movies.html' | relative_url }}">pelis</a>
     </nav>
-
+  </div>
 </header>
 
-<main class="fun-container">
-
-    {{ content }}
-
+<main class="wrap fun-main">
+  <h1>{{ page.title }}</h1>
+  {{ content }}
 </main>
 
-</body>
-
-</html>
+<footer class="wrap fun-footer">
+  <p>{{ site.title }} — modo fun, cero presión</p>
+</footer>

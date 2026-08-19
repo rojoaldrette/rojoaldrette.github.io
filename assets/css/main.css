@@ -1,0 +1,100 @@
+/* main.css — reset y estilos compartidos por todo el sitio */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------- Landing (home) ---------- */
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2.5rem;
+  padding: 2rem;
+}
+
+.landing h1 { font-size: 2.5rem; margin: 0; }
+.landing .tagline { opacity: 0.6; margin: 0; }
+
+.choices {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 2.5rem 3rem;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  min-width: 220px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.choice:hover {
+  transform: translateY(-4px);
+}
+
+.choice-title { font-size: 1.6rem; font-weight: 700; }
+.choice-sub { font-size: 0.9rem; opacity: 0.7; }
+
+.choice-research {
+  background: #0f1b2d;
+  color: #f4f1ea;
+}
+.choice-research:hover { box-shadow: 0 10px 24px rgba(15, 27, 45, 0.35); }
+
+.choice-fun {
+  background: #ffe082;
+  color: #3a2b00;
+  transform: rotate(-1deg);
+}
+.choice-fun:hover {
+  box-shadow: 0 10px 24px rgba(255, 179, 0, 0.35);
+  transform: rotate(0deg) translateY(-4px);
+}
+
+/* ---------- Cuerpo de una entrada larga (paper/libro/peli) ---------- */
+/* Usa las variables --fg/--muted/--accent definidas por research.css o fun.css,
+   así hereda el tono correcto sin duplicar reglas. */
+.entry-body {
+  margin-top: 1.5rem;
+  font-size: 1.02rem;
+}
+.entry-body h2 { margin-top: 2rem; font-size: 1.3rem; }
+.entry-body h3 { margin-top: 1.5rem; font-size: 1.1rem; }
+.entry-body p { margin: 0 0 1rem; }
+.entry-body ul, .entry-body ol { margin: 0 0 1rem; padding-left: 1.4rem; }
+.entry-body blockquote {
+  margin: 1.2rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 3px solid var(--accent, #999);
+  color: var(--muted, #666);
+}
+
+.back-link { margin-top: 2.5rem; font-size: 0.9rem; }

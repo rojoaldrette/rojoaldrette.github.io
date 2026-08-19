@@ -1,163 +1,21 @@
 ---
 layout: research
 ---
-
-<article class="paper-page">
-
-    <header class="paper-hero">
-
-        <div class="paper-kicker">
-
-            {% if page.year %}
-                {{ page.year }}
-            {% endif %}
-
-            {% if page.journal %}
-                · {{ page.journal }}
-            {% endif %}
-
-        </div>
-
-
-        <h1>{{ page.title }}</h1>
-
-
-        {% if page.subtitle %}
-
-        <p class="paper-subtitle">
-            {{ page.subtitle }}
-        </p>
-
-        {% endif %}
-
-
-        {% if page.authors %}
-
-        <div class="paper-authors">
-
-            {{ page.authors | join: " · " }}
-
-        </div>
-
-        {% endif %}
-
-
-        {% if page.tags %}
-
-        <div class="paper-tags">
-
-            {% for tag in page.tags %}
-
-            <span class="tag">
-                {{ tag }}
-            </span>
-
-            {% endfor %}
-
-        </div>
-
-        {% endif %}
-
-    </header>
-
-
-    <div class="paper-grid">
-
-
-        <main class="paper-content">
-
-            {{ content }}
-
-        </main>
-
-
-        <aside class="paper-sidebar">
-
-
-            {% if page.rating %}
-
-            <section>
-
-                <span class="sidebar-label">
-                    MY RATING
-                </span>
-
-                <div class="paper-rating">
-                    {{ page.rating }}<small>/10</small>
-                </div>
-
-            </section>
-
-            {% endif %}
-
-
-            {% if page.difficulty %}
-
-            <section>
-
-                <span class="sidebar-label">
-                    DIFFICULTY
-                </span>
-
-                <div class="difficulty">
-
-                    {% assign difficulty =
-                       page.difficulty | plus: 0 %}
-
-                    {% for i in (1..5) %}
-
-                        {% if i <= difficulty %}
-                            ●
-                        {% else %}
-                            ○
-                        {% endif %}
-
-                    {% endfor %}
-
-                </div>
-
-            </section>
-
-            {% endif %}
-
-
-            {% if page.read_date %}
-
-            <section>
-
-                <span class="sidebar-label">
-                    READ
-                </span>
-
-                <div>
-                    {{ page.read_date }}
-                </div>
-
-            </section>
-
-            {% endif %}
-
-
-            {% if page.paper_url %}
-
-            <section>
-
-                <a class="paper-external"
-                   href="{{ page.paper_url }}"
-                   target="_blank"
-                   rel="noopener">
-
-                    View original paper ↗
-
-                </a>
-
-            </section>
-
-            {% endif %}
-
-
-        </aside>
-
-    </div>
-
+<article class="entry-full">
+  <p class="paper-meta">
+    {{ page.authors }} &middot; {{ page.year }}
+    {%- if page.tags %} &middot;
+      {%- for tag in page.tags %} <span class="tag">{{ tag }}</span>{%- endfor -%}
+    {%- endif %}
+  </p>
+  {%- if page.url_source %}
+  <p><a href="{{ page.url_source }}" target="_blank" rel="noopener">enlace al paper &rarr;</a></p>
+  {%- endif %}
+  {%- if page.rating %}<p class="paper-rating">Rating: {{ page.rating }}/5</p>{%- endif %}
+
+  <div class="entry-body">
+    {{ content }}
+  </div>
+
+  <p class="back-link"><a href="{{ '/research/papers.html' | relative_url }}">&larr; todos los papers</a></p>
 </article>

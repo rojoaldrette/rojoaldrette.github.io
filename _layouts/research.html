@@ -1,58 +1,21 @@
 ---
 layout: default
 ---
-
 <header class="research-header">
-
-    <div class="research-header-inner">
-
-        <a class="research-logo"
-           href="{{ '/research/' | relative_url }}">
-
-            <span class="logo-main">{{ site.title }}</span>
-            <span class="logo-sub">Research</span>
-
-        </a>
-
-        <nav class="research-nav">
-
-            <a href="{{ '/research/' | relative_url }}">
-                Overview
-            </a>
-
-            <a href="{{ '/research/papers/' | relative_url }}">
-                Papers
-            </a>
-
-            <a href="{{ '/research/my-research/' | relative_url }}">
-                My Research
-            </a>
-
-            <a class="back-home"
-               href="{{ '/' | relative_url }}">
-                ← Main site
-            </a>
-
-        </nav>
-
-    </div>
-
+  <div class="wrap">
+    <a class="back-home" href="{{ '/' | relative_url }}">&larr; inicio</a>
+    <nav class="research-nav">
+      <a href="{{ '/research/' | relative_url }}">Research</a>
+      <a href="{{ '/research/papers.html' | relative_url }}">Papers</a>
+    </nav>
+  </div>
 </header>
 
-<main class="research-container">
-
-    {{ content }}
-
+<main class="wrap research-main">
+  <h1>{{ page.title }}</h1>
+  {{ content }}
 </main>
 
-<footer class="research-footer">
-
-    <div>
-        {{ site.title }} · Research
-    </div>
-
-    <a href="{{ '/' | relative_url }}">
-        Return to main site
-    </a>
-
+<footer class="wrap research-footer">
+  <p>{{ site.title }} — research</p>
 </footer>

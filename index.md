@@ -1,37 +1,18 @@
 ---
-layout: home
-title: Home
+layout: default
+title: Inicio
 ---
-
-# Rodrigo's blog!
-
-Welcome.
-
-I am interested in economics, research, books, ideas, and occasionally
-things that have nothing to do with economics.
-
-<div class="home-routes">
-
-<a class="route research-route" href="{{ '/research/' | relative_url }}">
-    <h2>Research</h2>
-    <p>
-        Papers, research projects, technical notes and things
-        I'm trying to understand.
-    </p>
-</a>
-
-<a class="route fun-route" href="{{ '/fun/' | relative_url }}">
-    <h2>Fun</h2>
-    <p>
-        Books, films, travel, music, games and other things
-        I find interesting.
-    </p>
-</a>
-
+<div class="landing">
+  <h1>{{ site.title }}</h1>
+  <p class="tagline">elige tu aventura</p>
+  <div class="choices">
+    <a class="choice choice-research" href="{{ '/research/' | relative_url }}">
+      <span class="choice-title">Research</span>
+      <span class="choice-sub">papers, notas, cosas serias</span>
+    </a>
+    <a class="choice choice-fun" href="{{ '/fun/' | relative_url }}">
+      <span class="choice-title">Fun</span>
+      <span class="choice-sub">libros, pelis, vibes</span>
+    </a>
+  </div>
 </div>
-
-## Currently Reading
-
-- Aiyagari (1994)
-- Huggett (1993)
-- ...
