@@ -1,6 +1,6 @@
 ---
 layout: fun
-title: Books
+title: books
 ---
 
 # Things I Like
