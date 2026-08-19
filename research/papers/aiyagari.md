@@ -37,11 +37,7 @@ Explain the model in your own notation.
 You can use LaTeX:
 
 $$
-V(a,e) =
-\max_c
-\left\{
-u(c) + \beta E[V(a',e')]
-\right\}.
+V(a,e)
 $$
 
 ---
