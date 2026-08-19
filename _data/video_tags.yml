@@ -24,12 +24,25 @@
 - id: programacion
   name: "Programación"
   parent: aprendizaje
+
+
 - id: academico
   name: "Académico"
   parent: null
 - id: investigacion
   name: "Investigación"
   parent: academico
+
 - id: seminarios
   name: "Seminarios y charlas"
   parent: academico
+
+- id: entretenimiento
+  name: "Entretenimiento"
+  parent: null
+
+- id: blogs
+  name: "Blogs"
+  parent: entretenimiento
+
+

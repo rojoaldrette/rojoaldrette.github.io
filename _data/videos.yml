@@ -1,9 +1,9 @@
 # Cada video lleva solo los tags más específicos que correspondan.
-- title: "Ejemplo de video de microeconomía"
-  url: "https://www.youtube.com/watch?v=VIDEO_ID"
-  channel: "ejemplo"
+- title: "Recordando el Xbox360"
+  url: "https://www.youtube.com/watch?v=hr0WRzp10wI"
+  channel: "Compadre Tlacuache"
   tags:
-    - microeconomia
+    - blogs
   review: >
     Una reseña corta del video. Aquí puedes explicar en uno o dos párrafos
     por qué vale la pena verlo.
