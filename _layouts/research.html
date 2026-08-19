@@ -4,31 +4,38 @@ layout: default
 
 <header class="research-header">
 
-    <div class="research-brand">
-        <a href="{{ '/research/' | relative_url }}">
-            {{ site.title }}
+    <div class="research-header-inner">
+
+        <a class="research-logo"
+           href="{{ '/research/' | relative_url }}">
+
+            <span class="logo-main">{{ site.title }}</span>
+            <span class="logo-sub">Research</span>
+
         </a>
+
+        <nav class="research-nav">
+
+            <a href="{{ '/research/' | relative_url }}">
+                Overview
+            </a>
+
+            <a href="{{ '/research/papers/' | relative_url }}">
+                Papers
+            </a>
+
+            <a href="{{ '/research/my-research/' | relative_url }}">
+                My Research
+            </a>
+
+            <a class="back-home"
+               href="{{ '/' | relative_url }}">
+                ← Main site
+            </a>
+
+        </nav>
+
     </div>
-
-    <nav class="research-nav">
-
-        <a href="{{ '/research/' | relative_url }}">
-            Research
-        </a>
-
-        <a href="{{ '/research/papers/' | relative_url }}">
-            Papers
-        </a>
-
-        <a href="{{ '/research/my-research/' | relative_url }}">
-            My Research
-        </a>
-
-        <a href="{{ '/' | relative_url }}">
-            ← Main site
-        </a>
-
-    </nav>
 
 </header>
 
@@ -37,3 +44,15 @@ layout: default
     {{ content }}
 
 </main>
+
+<footer class="research-footer">
+
+    <div>
+        {{ site.title }} · Research
+    </div>
+
+    <a href="{{ '/' | relative_url }}">
+        Return to main site
+    </a>
+
+</footer>
