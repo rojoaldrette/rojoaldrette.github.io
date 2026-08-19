@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    background: #ffffff;
+    color: #202020;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+}
+
+.research-header {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.research-brand a {
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.research-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.research-nav a {
+    color: #444;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", sans-serif;
+    font-size: 0.9rem;
+}
+
+.research-nav a:hover {
+    color: #000;
+}
+
+.research-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 30px;
+}
+
+.research-container h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.research-container h2 {
+    margin-top: 50px;
+}
+
+.research-container a {
+    color: #174a7e;
+}
+
+.research-footer {
+    border-top: 1px solid #ddd;
+    margin-top: 80px;
+    padding: 30px 40px;
+
+    color: #777;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 700px) {
+
+    .research-header {
+        display: block;
+    }
+
+    .research-nav {
+        margin-top: 15px;
+        flex-wrap: wrap;
+    }
+
+}
