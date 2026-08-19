@@ -1,5 +1,6 @@
 ---
 layout: fun
+section: fun
 title: Fun
 ---
 
