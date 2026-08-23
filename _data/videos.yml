@@ -10,7 +10,7 @@
   featured: true
 
 
-- title: "Recordando el Xbox360"
+- title: "Prakedy we"
   url: "https://www.youtube.com/watch?v=sPPNzMlfJA0"
   channel: "Prankedy"
   tags:
@@ -27,3 +27,12 @@
     - macroeconomia
   review: "Otra reseña breve."
   featured: false
+
+
+  - title: "I tracked down the thief who stole $200,000 of LEGO"
+  url: "https://www.youtube.com/watch?v=wscQpkcwgNU"
+  channel: "Reckless Ben"
+  tags:
+    - entretenimiento
+  review: "De los mejores trabajos de Ben, probablemente el mejor. Este we es como si robin hood tuviera tdah y su arco fuera el sistema legal estadounidense."
+  featured: true

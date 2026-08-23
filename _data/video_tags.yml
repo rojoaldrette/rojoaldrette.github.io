@@ -25,10 +25,12 @@
   name: "Programación"
   parent: aprendizaje
 
-
+#########################
 - id: academico
   name: "Académico"
   parent: null
+
+
 - id: investigacion
   name: "Investigación"
   parent: academico
