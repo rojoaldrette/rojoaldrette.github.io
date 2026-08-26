@@ -1,31 +1,30 @@
 # Cada video lleva solo los tags más específicos que correspondan.
-- title: "Recordando el Xbox360"
-  url: "https://www.youtube.com/watch?v=hr0WRzp10wI"
+- title: "Inicios Y Finales que debemos vivir"
+  url: "https://www.youtube.com/watch?v=_T_JOK_i1Ic"
   channel: "Compadre Tlacuache"
   tags:
     - blogs
   review: >
-    Una reseña corta del video. Aquí puedes explicar en uno o dos párrafos
-    por qué vale la pena verlo.
+    Maldito tlacuache siempre haciendome llorar.
   featured: true
 
 
-- title: "Prakedy we"
-  url: "https://www.youtube.com/watch?v=sPPNzMlfJA0"
-  channel: "Prankedy"
+- title: "How I Crossed The Entire Earth With $0"
+  url: "https://www.youtube.com/watch?v=qkLkdc32KGs"
+  channel: "Niko Omilana"
   tags:
     - blogs
   review: >
-    Una reverenda mierda
+    No soy super fan de Niko, lo siento demasiado europeo. Pero este video lo vi después de hacer Hitchhike yo mismo y genuinamente me sorprendió lo que se puede lograr hacer de pura bondad de la gente. Arriba el indomable espíritu humano.
   featured: true
 
 
-- title: "Ejemplo de video de macroeconomía"
-  url: "https://www.youtube.com/watch?v=VIDEO_ID_2"
-  channel: "ejemplo"
+- title: "Causal Inference - A Painless Introduction (#SoME5)"
+  url: "https://www.youtube.com/watch?v=3sp08Zmry6g"
+  channel: "Sam Levey"
   tags:
-    - macroeconomia
-  review: "Otra reseña breve."
+    - econometria
+  review: "Explicación clara de la inferencia causal. Este canal es una joya para conceptos de estadística y econometría."
   featured: false
 
 
@@ -35,4 +34,85 @@
   tags:
     - entretenimiento
   review: "De los mejores trabajos de Ben, probablemente el mejor. Este we es como si robin hood tuviera tdah y su arco fuera el sistema legal estadounidense."
+  featured: true
+
+
+
+- title: "Can Sine be Factored?"
+  url: "https://www.youtube.com/watch?v=nw6W_fMf008"
+  channel: "DFulks Math"
+  tags:
+    - entretenimiento
+    - matematicas
+  review: "Una travesía en cómo Euler pensaba acerca de problemas matemáticos. Baja producción, pero explicación clara y entretenida."
+  featured: false
+
+- title: "Proof of Fermat Last Theorem FROM SCRATCH"
+  url: "https://www.youtube.com/watch?v=9f-hGSh8lF0"
+  channel: "쉽게 풀어보는 수학이론"
+  tags:
+    - matematicas
+  review: "9 horas de matemáticas aajajaj. Explica el contenido de varios semestres de forma muy clara y con el objetivo de enter el último teorema de Fermat. No es para cualquiera, pero si te interesa aprender matemáticas más complicadas, adelante."
+  featured: true
+
+
+- title: "¿Escribir con claridad es traicionar el pensamiento? Del Hermetismo al autismo."
+  url: "https://www.youtube.com/watch?v=786DiOpWZG4"
+  channel: "Temas que a nadie Importan"
+  tags:
+    - entretenimiento
+    - filosofia
+  review: "Si tuviera un top de canales infravalorados, este sería el top 1. Guión impecable, humor, bibliografía completa con propósito, claridad en la explicación y una tesis interesante en cada video. Hazte el favor de ver un video de él, recomiendo este."
+  featured: true
+
+
+  
+- title: "What is Jacobian? | The right way of thinking derivatives and integrals"
+  url: "https://www.youtube.com/watch?v=wCZ1VEmVjVo"
+  channel: "Mathemaniac"
+  tags:
+    - entretenimiento
+    - matematicas
+  review: "ESTO ES MATEMÁTICAS CARAJO. Intuición cabrona de lo que es un Jacobiano y el cálculo matricial por extensión."
+  featured: false
+
+
+- title: "Telling the Same Joke Over and Over and Over and Over"
+  url: "https://www.youtube.com/watch?v=DPIoje1nfCQ"
+  channel: "Aaron Westberry"
+  tags:
+    - entretenimiento
+    - comedia
+  review: "M dio risa"
+  featured: false
+
+- title: "I finally understood why matter curves spacetime! (My mind is blown)"
+  url: "https://www.youtube.com/watch?v=qKZvAwcXceE"
+  channel: "FloatHeadPhysics"
+  tags:
+    - entretenimiento
+    - matematicas
+    - fisica
+  review: "La mejor explicación sencilla y rápida de porqué Einstein estaba tan cabron. Explica claramente el cambio de paradigma que trajeron las ideas de Einstein."
+  featured: false
+
+
+- title: "The Incel to Trans Pipeline and Inside Mari"
+  url: "https://www.youtube.com/watch?v=IAA1XtDOuH8"
+  channel: "ceicocat"
+  tags:
+    - entretenimiento
+    - filosofia
+    - manga
+  review: "Pocos videos me han movido cosas adentro como este video. Me picó esos vértices de disforia y a pensar en qué es el género de manera profunda, así como el trauma que acompaña el encarnar el género con tu cuerpo."
+  featured: true
+
+
+- title: "Why You Confuse Love With Being Wanted"
+  url: "https://www.youtube.com/watch?v=6RznZ17IMXE"
+  channel: "TwiceReincarnated"
+  tags:
+    - entretenimiento
+    - manga
+  review: "Me recordó porqué el personaje de Denji es tan interesante, una gran representación de impulso y represión."
   featured: true

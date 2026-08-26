@@ -24,6 +24,12 @@
 - id: programacion
   name: "Programación"
   parent: aprendizaje
+- id: filosofia
+  name: "Filosofía"
+  parent: aprendizaje
+- id: fisica
+  name: "Física"
+  parent: aprendizaje
 
 #########################
 - id: academico
@@ -39,6 +45,8 @@
   name: "Seminarios y charlas"
   parent: academico
 
+
+##########################
 - id: entretenimiento
   name: "Entretenimiento"
   parent: null
@@ -47,4 +55,8 @@
   name: "Blogs"
   parent: entretenimiento
 
+
+- id: manga
+  name: "Manga"
+  parent: entretenimiento
 
